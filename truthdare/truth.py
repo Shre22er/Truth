@@ -270,10 +270,3 @@ class Truth(BaseCog):
         embed.title = f"{author.name} asked {user.name}"
         embed.description = strings[rs].format(name=name)
         await ctx.send(embed=embed)
-
-   
-        # Build Embed
-        embed = discord.Embed()
-        embed.title = f"{author.name} dared {user.name}"
-        embed.description = strings[rs].format(name=name)
-        await ctx.send(embed=embed)
