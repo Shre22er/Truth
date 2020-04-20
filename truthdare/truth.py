@@ -413,7 +413,67 @@ class Truth(BaseCog):
                 "How many girlfriends or boyfiriends have you had?",
                 "Do you like it with the lights on or off?",
                 "When you wake up in the morning, what is the first thought that comes to mind when you look at me?",
-
+                 "What is your favourite type of porn?",
+                "What is the hottest thing you have ever experienced while having sex?",
+                "What’s your secret talent in bed?",
+                "What is your favourite sexual position",
+                "What sexual act arouses you the most?",
+                "What is your favourite type of foreplay?",
+                "Describe your ultimate sexual fantasy.",
+                "What is the weirdest sexual request you have ever received?",
+                "Name 2 sexual things you’re not into.",
+                "Tell an erotic story about yourself or one of your friends.",
+                "What is the best time of day to have sex?",
+                "Tell the group about your last one-night stand.",
+                "“It turns me on when somebody calls me …..” during sex.",
+                "Tell the group about the longest sex session you have had (with whom and when).",
+                "You’re the flirt expert. Give 3 good tips.",
+                "What is the extremest sexual act you have ever performed?",
+                "What sex act would you never do again?",
+                " Who is the most inappropriate person you’ve had a sexual fantasy about?",
+                " What’s a sex act most people like that you think is overrated?",
+                " If you had to choose between only oral sex or only penetrative sex for the rest of your life, which one would you pick?",
+                " Is sex better when you’re in love, or better when the other person is hot and mysterious?",
+                " Do you know the last name of everyone you’ve had sex with?",
+                " How many sex partners do you believe is “too many”?",
+                " What’s #1 on your sexual bucket list right now?",
+                " Have you ever taken someone’s virginity?",
+                "What do you think is the sexiest body part of your same sex?",
+                "What’s something most people don’t like in bed, but you can’t get enough of?",
+                " What’s the sexiest thing anyone’s ever said to you?",
+                "What’s the least sexy thing anyone’s ever said to you (while trying to be sexy)?",
+                "If you had the power to give or receive unlimited orgasms, what would you pick?",
+                " What kind of porn did you last watch?",
+                "If you could have one sexual superpower, what would it be?",
+                "What is a somewhat weird fetish that you would actually try?",
+                "What’s the weirdest thing you’ve ever done while masturbating?",
+                "If you had to choose between having sex with one person for the rest of your life or never being able to have sex with the same person more than once, what would you pick?",
+                "Would you rather pay someone to put on a striptease for you (they aren’t allowed to touch), pay someone to cuddle and massage you while wearing non-sexy clothes, or pay someone to talk dirty over the phone but never be able to see them?",
+                "What’s the least sexual thing I’ve done that has gotten you aroused?",
+                "What do you wish someone would have told you about sex way earlier?",
+                "Has anyone ever caught you having sex?",
+                "What non-sexual part of your body turns you on the most when I touch it?",
+                "What’s the biggest lie you’ve told in order to get someone into bed?",
+                "Have you ever kicked someone out of your bed immediately after having sex?",
+                "What one sexual experience would you want to erase from your memory?",
+                "What one sexual experience do you think about most often?",
+                "Have you ever called someone (or been called) ‘Daddy’?",
+                "How much money would your boss have to offer you before you slept with him or her?",
+                "Do you have any sex tapes?",
+                "What’s your biggest sexual fear?",
+                "What is the longest you’ve ever given head?",
+                "Have you ever taken it in the butt or would you?",
+                "Do you enjoy rough or slow sex?",
+                "Do you like anal?",
+                "What is your least favourite position?",
+                "ell me a fantasy that you have never shared with someone before.",
+                "When is the last time you masturbated?",
+                "Have you ever swallowed your partners ejaculate?",
+                "What’s the sexiest item of clothing you own?",
+                "If you could only choose 2 things for me to wear, what would they be?",
+                "Have you ever refused to go down on a girl/guy? Why?",
+                "Is there someone who everyone thinks is hot, but you think is ugly?",
+                "What is the weirdest thing that turns you on?"
             ]
         }
         self.config.register_global(**default_global)
@@ -465,7 +525,7 @@ class Truth(BaseCog):
 
         # Build Embed
         embed = discord.Embed()
-        embed.title = f"{author.name} wwants to know {user.name}"
+        embed.title = f"{author.name} wants to know {user.name}"
         embed.description = strings[rs].format(name=name)
         await ctx.send(embed=embed)
 
