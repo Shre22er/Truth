@@ -475,7 +475,7 @@ class Truth(BaseCog):
                 "Is there someone who everyone thinks is hot, but you think is ugly?",
                 "What is the weirdest thing that turns you on?"
           ],
-        "newquestions": [
+     "newquestions": [
                 "What’s the scariest thing you’ve ever done?",
                 "What’s your biggest regret?",
                 "What’s the most childish thing you’ve ever done?",
@@ -501,28 +501,28 @@ class Truth(BaseCog):
                 "What would you do with your time if you didn’t have to work?",
                 "What’s the worst thing that’s ever happened to you?",
                 "What’s one thing you can’t live without?",
-                " When’s the last time you took a shower?",
-                " Have you ever lied or done something to get out of trouble?",
-                " What’s the best purchase you ever made?",
-                " What’s the most illegal thing you’ve ever done.",
+                " When’s the last time you took a shower?",
+                " Have you ever lied or done something to get out of trouble?",
+                " What’s the best purchase you ever made?",
+                " What’s the most illegal thing you’ve ever done.",
                 "Have you ever been arrested",
                 "What would you do with a million dollars?",
                 "What do you believe in?",
                 "Have you ever shared a secret you shouldn’t have, or promised you wouldn’t?",
                 "What’s something you’re looking forward to and not looking forward to?",
                 "What’s something you think is absolutely disgusting?",
-                " When was the last time you cried and why?",
-                " If you could live anywhere, where would it be?",
+                " When was the last time you cried and why?",
+                " If you could live anywhere, where would it be?",
                 "What’s your biggest pet peeve?",
                 "What do you value most in your relationships?",
-                "f you could have three wishes, what would you wish for? What is your secret vice/guilty pleasure?",
-                " What’s the most embarrassing thing you’ve ever done?",
+                "If you could have three wishes, what would you wish for? What is your secret vice/guilty pleasure?",
+                "What’s the most embarrassing thing you’ve ever done?",
                 "What’s the worst gift you’ve ever received?",
                 "What’s the last thing you searched on your phone?",
                 "Have you ever been so drunk you blacked out?",
                 "What’s the most embarrassing thing your parents have caught you doing?",
                 "What’s the biggest romantic fail you’ve ever experienced?",
-                " What’s the biggest secret you’ve ever kept from your boyfriend or girlfriend?",
+                " What’s the biggest secret you’ve ever kept from your boyfriend or girlfriend?",
                 "What’s the biggest lie you’ve ever told your boyfriend or girlfriend—without getting caught?",
                 "What do you like most and least about your own appearance?",
                 "What do you like most and least about your significant other’s appearance?",
@@ -534,7 +534,7 @@ class Truth(BaseCog):
                 "What’s the biggest sexual regret you have?",
                 "What’s the biggest dating disappointment you’ve experienced so far?",
                 "Do you ever catch yourself thinking about doing it with someone of the same sex?",
-                " Have you ever been a thief and stolen something?",
+                " Have you ever been a thief and stolen something?",
                 "What’s the most deviant thing you have ever done?",
                 "What’s your craziest sexual fantasy?",
                 " Have you ever been extremely rude to someone you know?",
@@ -635,7 +635,7 @@ class Truth(BaseCog):
                 "What would you change about your life if you could?",
                 "What’s the most flirtatious thing you’ve ever done?",
                 "If you could make one wish right this second, what would it be?",
-                "What three adjectives best describe your vagina/penis?",
+                "What three adjectives best describe your vagina/penis?",
                 "What does the perfect male/female body look like (from head to toe and everything in between) in your opinion?",
                 "How many people can someone sleep with before you secretly judge them for their “number”?",
                 "What’s the one thing you’d do in bed with someone if you had no inhibitions whatsoever?",
@@ -649,27 +649,32 @@ class Truth(BaseCog):
                 "When was a time you were so turned on you couldn't stand it?",
                 "Hmany times a week do you touch yourself?",
                 "Have you ever done it at work?",
-                "What’s something that you always wanted to say to me but couldn’t? ",
-                "How would you sound if you picked up a random book and read it in the most seductive voice you can?  ",
-                "Have you ever flashed someone?  ",
-                "Have you ever shared a toothbrush with someone? ",
-                "What’s the color of your underwear? ",
-                "Who was the last person you checked out?  ",
-                "Which movie star do you think is the hottest? ",
-                "How would you rate my looks on a scale of 1 to 10? ",
-                "Do you sleep without your clothes? ",
-                "If you could marry more than one person, how many people would you marry, and who would they be? ",
-                "Who is the one person that you have met that had the stinkiest armpits?  ",
-                "Who do you hate and why? ",
-                "If you were to kiss a person of the same gender, who would it be? ",
-                "When was the last time you had a sexual dream? Who was it about? ",
-                "How old were you when you lost your virginity? ",
-                "Have you ever faked an orgasm during sex?  ",
-                "What’s the biggest turn-on to you while making out with someone?   ",
+                "What’s something that you always wanted to say to me but couldn’t? ",
+                "How would you sound if you picked up a random book and read it in the most seductive voice you can?  ",
+                "Have you ever flashed someone?  ",
+                "Have you ever shared a toothbrush with someone? ",
+                "What’s the color of your underwear? ",
+                "Who was the last person you checked out?  ",
+                "Which movie star do you think is the hottest? ",
+                "How would you rate my looks on a scale of 1 to 10? ",
+                "Do you sleep without your clothes? ",
+                "If you could marry more than one person, how many people would you marry, and who would they be? ",
+                "Who is the one person that you have met that had the stinkiest armpits?  ",
+                "Who do you hate and why? ",
+                "If you were to kiss a person of the same gender, who would it be? ",
+                "When was the last time you had a sexual dream? Who was it about? ",
+                "How old were you when you lost your virginity? ",
+                "Have you ever faked an orgasm during sex?  ",
+                "What’s the biggest turn-on to you while making out with someone?   ",
                 "Have you ever had the fantasy of making out in the shower?",
             ],
+
+                
+
         }
         self.config.register_global(**default_global)
+
+
 
     @commands.command()
     @commands.bot_has_permissions(embed_links=True)
@@ -695,33 +700,13 @@ class Truth(BaseCog):
         embed.description = strings[rs].format(name=name)
         await ctx.send(embed=embed)
 
-        
-    @commands.command()
-    @commands.bot_has_permissions(embed_links=True)
-    async def tellme(self, ctx, *, user: discord.Member):
-        """Ask a truth question to users!"""
-
-        # Set author
-        author = ctx.message.author
-
-        # Get and pick random string
-        strings = await self.config.personaltruths()
-        mn = len(strings)
-        rs = randint(0, mn - 1)
-
-        # Get and pick random user
-        mn2 = len(ctx.guild.members)
-        rp = randint(0, mn2 - 1)
-        name = ctx.guild.members[rp].mention
-
+   
         # Build Embed
         embed = discord.Embed()
-        embed.title = f"{author.name} wants to know {user.name}"
+        embed.title = f"{author.name} dared {user.name}"
         embed.description = strings[rs].format(name=name)
         await ctx.send(embed=embed)
 
-        
-        
     @commands.command()
     @commands.bot_has_permissions(embed_links=True)
     async def curious(self, ctx, *, user: discord.Member):
