@@ -626,6 +626,7 @@ class Truth(BaseCog):
                 "Name 2 sexual things you’re not into.",
                 "Tell an erotic story about yourself or one of your friends.",
                 "What is the best time of day to have sex?",
+                "What are your main usernames for internet sites?"
                 "Tell the group about your last one-night stand.",
                 "What is your guilty pleasure?",
                 "“It turns me on when somebody calls me …..” during sex.",
