@@ -668,8 +668,8 @@ class Truth(BaseCog):
                 "What’s the biggest turn-on to you while making out with someone?   ",
                 "Have you ever had the fantasy of making out in the shower?"
             ],
-          }
-          self.config.register_global(**default_global)
+        }
+        self.config.register_global(**default_global)
 
     @commands.command()
     @commands.bot_has_permissions(embed_links=True)
